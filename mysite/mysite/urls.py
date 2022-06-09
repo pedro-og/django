@@ -1,8 +1,8 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import re_path, include
 
 urlpatterns = [
-    path('', include('main.urls')),
-    path('admin/', admin.site.urls),
-    path('tinymce/', include('tinymce.urls')),
+    re_path(r'', include('main.urls')),
+    re_path(r'admin/', admin.site.urls),
+    re_path(r'tinymce/', include('tinymce.urls')),
 ]
